@@ -1,0 +1,8 @@
+h1 Top
+p 
+  = link_to '足あと', visitors_pages_url
+
+- @users.each do |user|
+  - if user.id != current_user.id
+    p = link_to user.name, page_url(user.id)
+end
